@@ -9,6 +9,11 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 
+/**
+ * This is a custom block.
+ * <p>Unlike the other blocks that can be placed</p>
+ *
+ */
 public class VoidBlock extends Block{
 
     public VoidBlock(Properties p_49795_) {
@@ -20,7 +25,7 @@ public class VoidBlock extends Block{
         if(!pLevel.isClientSide()){
             if (pEntity instanceof LivingEntity){
                 LivingEntity livingEntity = ((LivingEntity) pEntity);
-                livingEntity.addEffect(new MobEffectInstance(MobEffects.HARM, 50));
+                livingEntity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 100, 200));
             }
         }
     }

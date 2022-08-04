@@ -3,6 +3,7 @@ package net.mammalthebest2.voidless_mod.block;
 import net.mammalthebest2.voidless_mod.VoidlessModMain;
 import net.mammalthebest2.voidless_mod.block.custom.ModFlammableRotatedPillarBlock;
 import net.mammalthebest2.voidless_mod.block.custom.VoidBlock;
+import net.mammalthebest2.voidless_mod.block.custom.VoidInfuser;
 import net.mammalthebest2.voidless_mod.item.ModItems;
 import net.mammalthebest2.voidless_mod.item.VoidlessModCreativeTab;
 import net.mammalthebest2.voidless_mod.world.feature.tree.VoidTreeGrower;
@@ -22,6 +23,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 import java.util.function.Supplier;
+
+/**
+ * Some blocks are not from the Block class like this one:
+ * {@link net.mammalthebest2.voidless_mod.block.custom.VoidBlock}
+ */
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCK =
@@ -122,12 +128,11 @@ public class ModBlocks {
                     return 20;
                 }
             }, VoidlessModCreativeTab.VOIDLESS_MOD);
-
-    public static final RegistryObject<Block> VOID_DIRT = registerBlock("void_dirt",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.GRASS_BLOCK)), VoidlessModCreativeTab.VOIDLESS_MOD);
-
     public static final RegistryObject<Block> VOID_SAPLING = registerBlock("void_sapling",
             () -> new SaplingBlock(new VoidTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), VoidlessModCreativeTab.VOIDLESS_MOD);
+
+    public static final RegistryObject<Block> VOID_INFUSER = registerBlock("void_infuser",
+            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()), VoidlessModCreativeTab.VOIDLESS_MOD);
 
 
 }
