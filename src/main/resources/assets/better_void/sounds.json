@@ -1,0 +1,10 @@
+{
+  "amongus_music": {
+    "sounds": [
+      {
+        "name": "better_void:amongus_music",
+        "stream": true
+      }
+    ]
+  }
+}

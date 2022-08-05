@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "voidless_mod:void_ore",
-    "voidless_mod:void_block"
+    "better_void:void_ore",
+    "better_void:void_block"
   ]
 }

@@ -19,13 +19,13 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '1.0.0-1.18.2'
-group = 'net.mammalthebest2.voidless_mod' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'voidless_mod'
+group = 'net.mammalthebest2.better_void' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'better_void'
 
 // Mojang ships Java 17 to end users in 1.18+, so your mod should target Java 17.
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 
-println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
+println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') +  '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
     // The mappings can be changed at any time and must be in the following format.
     // Channel:   Version:
@@ -61,10 +61,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'voidless_mod'
+            property 'forge.enabledGameTestNamespaces', 'better_void'
 
             mods {
-                voidless_mod {
+                better_void {
                     source sourceSets.main
                 }
             }
@@ -86,10 +86,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'voidless_mod'
+            property 'forge.enabledGameTestNamespaces', 'better_void'
 
             mods {
-                voidless_mod {
+                better_void {
                     source sourceSets.main
                 }
             }
@@ -114,10 +114,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Comma-separated list of namespaces to load gametests from. Empty = all namespaces.
-            property 'forge.enabledGameTestNamespaces', 'voidless_mod'
+            property 'forge.enabledGameTestNamespaces', 'better_void'
 
             mods {
-                voidless_mod {
+                better_void {
                     source sourceSets.main
                 }
             }
@@ -139,10 +139,10 @@ minecraft {
             property 'forge.logging.console.level', 'debug'
 
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'voidless_mod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'better_void', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
 
             mods {
-                voidless_mod {
+                better_void {
                     source sourceSets.main
                 }
             }
@@ -170,6 +170,7 @@ dependencies {
     // The userdev artifact is a special name and will get all sorts of transformations applied to it.
     minecraft 'net.minecraftforge:forge:1.18.2-40.1.54'
 
+
     // Real mod deobf dependency examples - these get remapped to your current mappings
     // compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api") // Adds JEI API as a compile dependency
     // runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}") // Adds the full JEI mod as a runtime dependency
@@ -177,6 +178,7 @@ dependencies {
 
     // Examples using mod jars from ./libs
     // implementation fg.deobf("blank:coolmod-${mc_version}:${coolmod_version}")
+    // implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.30')
 
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
@@ -187,7 +189,7 @@ dependencies {
 jar {
     manifest {
         attributes([
-                "Specification-Title"     : "voidless_mod",
+                "Specification-Title"     : "better_void",
                 "Specification-Vendor"    : "examplemodsareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,

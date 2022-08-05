@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "DDD",
+    "   "
+  ],
+  "key": {
+    "D": {
+      "item": "better_void:void_ingot"
+    }
+  },
+  "result": {
+    "item": "better_void:void_slab"
+  }
+}

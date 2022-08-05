@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "better_void:block/void_block",
+    "bottom": "better_void:block/void_block",
+    "top": "better_void:block/void_block"
+  }
+}

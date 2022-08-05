@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "DED",
+    "DDD"
+  ],
+  "key": {
+    "E": {
+      "item": "minecraft:cooked_beef"
+    },
+    "D": {
+      "item": "better_void:void_ingot"
+    }
+  },
+  "result": {
+    "item": "better_void:void_steak"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "better_void:void_wood",
+    "better_void:void_log",
+    "better_void:stripped_void_log",
+    "better_void:stripped_void_wood"
+  ]
+}
