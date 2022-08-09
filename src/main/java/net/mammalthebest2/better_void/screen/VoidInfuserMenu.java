@@ -6,41 +6,62 @@ import net.mammalthebest2.better_void.screen.slot.ModResultSlot;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerLevelAccess;
-import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.inventory.*;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.Nullable;
 
 public class VoidInfuserMenu extends AbstractContainerMenu {
     private final VoidInfuserBlockEntity blockEntity;
     private final Level level;
+    private final ContainerData data;
 
-    public VoidInfuserMenu(int pContainerId, Inventory inv, FriendlyByteBuf extraData) {
-        this(pContainerId, inv, inv.player.level.getBlockEntity(extraData.readBlockPos()));
+    public VoidInfuserMenu(int pContainerId, Inventory inventory, FriendlyByteBuf extraData) {
+        this(pContainerId, inventory, inventory.player.level.getBlockEntity(extraData.readBlockPos()), new SimpleContainerData(2));
     }
 
-    public VoidInfuserMenu(int pContainerId, Inventory inv, BlockEntity entity) {
+    public VoidInfuserMenu(int pContainerId, Inventory inventory, BlockEntity entity, ContainerData data) {
         super(ModMenuTypes.VOID_INFUSER_MENU.get(), pContainerId);
-        checkContainerSize(inv, 3);
+        checkContainerSize(inventory, 4);
         blockEntity = ((VoidInfuserBlockEntity) entity);
-        this.level = inv.player.level;
+        this.level = inventory.player.level;
+        this.data = data;
 
-        addPlayerHotbar(inv);
-        addPlayerHotbar(inv);
+        addPlayerInventory(inventory);
+        addPlayerHotbar(inventory);
 
         this.blockEntity.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY).ifPresent(handler -> {
             this.addSlot(new SlotItemHandler(handler, 0, 34, 40));
             this.addSlot(new SlotItemHandler(handler, 1, 57, 18));
-            this.addSlot(new SlotItemHandler(handler, 1, 103, 18));
-            this.addSlot(new ModResultSlot(handler, 2, 80, 60));
+            this.addSlot(new SlotItemHandler(handler, 2, 103, 18));
+            this.addSlot(new ModResultSlot(handler, 3, 80, 60));
         });
 
+        addDataSlots(data);
     }
 
+    public boolean isCrafting() {
+        return data.get(0) > 0;
+    }
+
+    public int getScaledProgress() {
+        int progress = this.data.get(0);
+        int maxProgress = this.data.get(1);  // Max Progress
+        int progressArrowSize = 26; // This is the height in pixels of your arrow
+
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
+    }
+
+    // CREDIT GOES TO: diesieben07 | https://github.com/diesieben07/SevenCommons
+    // must assign a slot number to each of the slots used by the GUI.
+    // For this container, we can see both the tile inventory's slots as well as the player inventory slots and the hotbar.
+    // Each time we add a Slot to the container, it automatically increases the slotIndex, which means
+    //  0 - 8 = hotbar slots (which will map to the InventoryPlayer slot numbers 0 - 8)
+    //  9 - 35 = player inventory slots (which map to the InventoryPlayer slot numbers 9 - 35)
+    //  36 - 44 = TileInventory slots, which map to our TileEntity slot numbers 0 - 8)
     private static final int HOTBAR_SLOT_COUNT = 9;
     private static final int PLAYER_INVENTORY_ROW_COUNT = 3;
     private static final int PLAYER_INVENTORY_COLUMN_COUNT = 9;
@@ -51,7 +72,6 @@ public class VoidInfuserMenu extends AbstractContainerMenu {
 
     // THIS YOU HAVE TO DEFINE!
     private static final int TE_INVENTORY_SLOT_COUNT = 4;  // must be the number of slots you have!
-
 
     @Override
     public ItemStack quickMoveStack(Player playerIn, int index) {

@@ -9,10 +9,10 @@ import net.mammalthebest2.better_void.recipe.ModRecipes;
 import net.mammalthebest2.better_void.screen.ModMenuTypes;
 import net.mammalthebest2.better_void.screen.VoidInfuserScreen;
 import net.mammalthebest2.better_void.sound.ModSounds;
+
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -53,7 +53,6 @@ public class BetterVoidMain
         // Continue on
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         eventBus.addListener(this::setup);
-        eventBus.addListener(this::clientSetup);
 
         // Here they are
         ModItems.register(eventBus);
@@ -62,29 +61,18 @@ public class BetterVoidMain
         ModSounds.register(eventBus);
         ModBlockEntities.register(eventBus);
 
-        ModMenuTypes.register(eventBus);
         ModEffects.register(eventBus);
+        ModMenuTypes.register(eventBus);
 
         ModPotions.register(eventBus);
         ModRecipes.register(eventBus);
 
 
+
         MinecraftForge.EVENT_BUS.register(this);
     }
 
-    // Have you seen the void door and trapdoor? These are needed so that you can see the block in the inventory well.
-    // If these didn't exist then the block in the inventory look funny and we dont want that
-    // Now go to project (<--) and go to better_void > item > ModItems
-    private void clientSetup(final FMLClientSetupEvent event){
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VOID_TRAPDOOR.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VOID_DOOR.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VOID_SAPLING.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VOID_LEAVES.get(), RenderType.translucent());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.VOID_INFUSER.get(), RenderType.translucent());
-        MenuScreens.register(ModMenuTypes.VOID_INFUSER_MENU.get(), VoidInfuserScreen::new);
 
-
-    }
 
     private void setup(final FMLCommonSetupEvent event)
     {

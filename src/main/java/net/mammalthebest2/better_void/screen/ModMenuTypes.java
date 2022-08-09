@@ -14,14 +14,15 @@ public class ModMenuTypes {
     public static final DeferredRegister<MenuType<?>> MENUS =
             DeferredRegister.create(ForgeRegistries.CONTAINERS, BetterVoidMain.MOD_ID);
 
-    public static final RegistryObject<MenuType<VoidInfuserMenu>> VOID_INFUSER_MENU =
-            registerMenuType(VoidInfuserMenu::new, "void_infuser_menu");
-
-    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuType(IContainerFactory<T> factory, String name){
-        return MENUS.register(name, () -> IForgeMenuType.create(factory));
+    private static <T extends AbstractContainerMenu> RegistryObject<MenuType<T>> registerMenuTypes(IContainerFactory<T> factory, String name){
+        return MENUS.register(name,
+                () -> IForgeMenuType.create(factory));
     }
 
-    public static void register(IEventBus eventbus){
-        MENUS.register(eventbus);
+    public static final RegistryObject<MenuType<VoidInfuserMenu>> VOID_INFUSER_MENU =
+            registerMenuTypes(VoidInfuserMenu::new, "void_infuser_menu");
+
+    public static void register(IEventBus eventBus) {
+        MENUS.register(eventBus);
     }
 }

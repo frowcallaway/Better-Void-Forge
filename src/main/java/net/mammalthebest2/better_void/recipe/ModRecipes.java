@@ -11,9 +11,9 @@ public class ModRecipes {
     public static final DeferredRegister<RecipeSerializer<?>> SERIALIZERS =
             DeferredRegister.create(ForgeRegistries.RECIPE_SERIALIZERS, BetterVoidMain.MOD_ID);
 
-    public static final RegistryObject<RecipeSerializer<VoidInfuserRecipe>> VOID_INFUSING_RECIPE =
+    public static final RegistryObject<RecipeSerializer<VoidInfusingRecipe>> VOID_INFUSING_SERIALIZER =
             SERIALIZERS.register("void_infusing",
-                    () -> VoidInfuserRecipe.Serializer.INSTANCE);
+                    () -> VoidInfusingRecipe.Serializer.INSTANCE);
 
 
     public static void register(IEventBus eventBus){

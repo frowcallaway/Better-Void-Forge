@@ -26,7 +26,7 @@ import java.util.function.Supplier;
 
 /**
  * Some blocks are not from the Block class like this one:
- * {@link net.mammalthebest2.better_void.block.custom.VoidBlock}
+ * {@link VoidBlock}
  */
 
 public class ModBlocks {
@@ -133,6 +133,13 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> VOID_INFUSER = registerBlock("void_infuser",
             () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()), BetterVoidCreativeTab.better_void);
+
+    public static final RegistryObject<Block> ENDSTONE_VOID_ORE = registerBlock("endstone_void_ore",
+            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.STONE)), BetterVoidCreativeTab.better_void);
+
+    public static final RegistryObject<Block> NETHERRACK_VOID_ORE = registerBlock("netherrack_void_ore",
+            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.STONE)), BetterVoidCreativeTab.better_void);
+
 
 
 }

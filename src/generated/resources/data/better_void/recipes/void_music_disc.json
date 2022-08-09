@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DDD",
+    "D#D",
+    "DDD"
+  ],
+  "key": {
+    "D": {
+      "item": "better_void:void_ingot"
+    },
+    "#": {
+      "item": "minecraft:music_disc_13"
+    }
+  },
+  "result": {
+    "item": "better_void:void_music_disc"
+  }
+}

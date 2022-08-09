@@ -24,7 +24,7 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.VOID_STEAK.get());
         simpleItem(ModItems.VOID_HELMET.get());
-        simpleItem(ModItems.VOID_LEGGING.get());
+        simpleItem(ModItems.VOID_LEGGINGS.get());
         simpleItem(ModItems.VOID_MUSIC_DISC.get());
 
         handheldItem(ModItems.VOID_SHOVEL.get());

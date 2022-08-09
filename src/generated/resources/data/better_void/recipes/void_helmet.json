@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "DD ",
-    "DD ",
-    "DD "
+    "DDD",
+    "D D",
+    "   "
   ],
   "key": {
     "D": {
-      "item": "better_void:void_planks"
+      "item": "better_void:void_ingot"
     }
   },
   "result": {
-    "item": "better_void:void_door"
+    "item": "better_void:void_helmet"
   }
 }

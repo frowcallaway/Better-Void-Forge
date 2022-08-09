@@ -13,10 +13,11 @@ public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES =
             DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, BetterVoidMain.MOD_ID);
 
-    public static final RegistryObject<BlockEntityType<VoidInfuserBlockEntity>> VOID_INFUSER_BLOCK_ENTITY =
-            BLOCK_ENTITIES.register("void_infuser_block_entity",
+    public static final RegistryObject<BlockEntityType<VoidInfuserBlockEntity>> VOID_INFUSER_ENTITY =
+            BLOCK_ENTITIES.register("void_infuser_entity",
                     () -> BlockEntityType.Builder.of(VoidInfuserBlockEntity::new,
                             ModBlocks.VOID_INFUSER.get()).build(null));
+
     public static void register(IEventBus eventBus){
         BLOCK_ENTITIES.register(eventBus);
     }

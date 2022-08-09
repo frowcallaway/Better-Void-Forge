@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 
 public class VoidInfuserScreen extends AbstractContainerScreen<VoidInfuserMenu> {
     private static final ResourceLocation TEXTURE =
-            new ResourceLocation(BetterVoidMain.MOD_ID, "textures/gui/void_infuser_gui.png");
+            new ResourceLocation(BetterVoidMain.MOD_ID,"textures/gui/void_infuser_gui.png");
 
     public VoidInfuserScreen(VoidInfuserMenu pMenu, Inventory pPlayerInventory, Component pTitle) {
         super(pMenu, pPlayerInventory, pTitle);
@@ -26,6 +26,11 @@ public class VoidInfuserScreen extends AbstractContainerScreen<VoidInfuserMenu> 
         int y = (height - imageHeight) / 2;
 
         this.blit(pPoseStack, x, y, 0, 0, imageWidth, imageHeight);
+
+        if(menu.isCrafting()) {
+            blit(pPoseStack, x + 102, y + 41, 176, 0, 8, menu.getScaledProgress());
+        }
+
     }
 
     @Override
@@ -34,4 +39,5 @@ public class VoidInfuserScreen extends AbstractContainerScreen<VoidInfuserMenu> 
         super.render(pPoseStack, mouseX, mouseY, delta);
         renderTooltip(pPoseStack, mouseX, mouseY);
     }
+
 }

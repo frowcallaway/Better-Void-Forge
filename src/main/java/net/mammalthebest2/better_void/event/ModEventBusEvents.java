@@ -1,7 +1,7 @@
 package net.mammalthebest2.better_void.event;
 
 import net.mammalthebest2.better_void.BetterVoidMain;
-import net.mammalthebest2.better_void.recipe.VoidInfuserRecipe;
+import net.mammalthebest2.better_void.recipe.VoidInfusingRecipe;
 import net.minecraft.core.Registry;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -22,7 +22,7 @@ public class ModEventBusEvents {
 
     @SubscribeEvent
     public static void registerRecipeTypes(final RegistryEvent.Register<RecipeSerializer<?>> event) {
-        Registry.register(Registry.RECIPE_TYPE, VoidInfuserRecipe.Type.ID, VoidInfuserRecipe.Type.INSTANCE);
+        Registry.register(Registry.RECIPE_TYPE, VoidInfusingRecipe.Type.ID, VoidInfusingRecipe.Type.INSTANCE);
     }
 
 }

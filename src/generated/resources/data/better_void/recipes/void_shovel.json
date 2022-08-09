@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " D ",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "D": {
+      "item": "better_void:void_ingot"
+    },
+    "#": {
+      "item": "minecraft:stick"
+    }
+  },
+  "result": {
+    "item": "better_void:void_shovel"
+  }
+}

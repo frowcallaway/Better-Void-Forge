@@ -1,0 +1,11 @@
+{
+  "type": "better_void:void_infusing",
+  "ingredients": [
+    {
+      "item": "better_void:void_fragment"
+    }
+  ],
+  "output": {
+    "item": "better_void:void_ingot"
+  }
+}

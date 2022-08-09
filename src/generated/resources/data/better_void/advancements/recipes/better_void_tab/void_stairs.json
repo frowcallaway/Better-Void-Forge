@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_void_ingot": {
+    "has_void_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "better_void:void_ingot"
+              "better_void:void_block"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_void_ingot",
+      "has_void_block",
       "has_the_recipe"
     ]
   ]

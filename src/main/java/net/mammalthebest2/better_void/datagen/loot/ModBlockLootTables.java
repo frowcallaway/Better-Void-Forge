@@ -1,7 +1,6 @@
 package net.mammalthebest2.better_void.datagen.loot;
 
 import net.mammalthebest2.better_void.block.ModBlocks;
-import net.mammalthebest2.better_void.datagen.ModItemModelProvider;
 import net.mammalthebest2.better_void.item.ModItems;
 import net.minecraft.data.loot.BlockLoot;
 import net.minecraft.world.level.block.Block;
@@ -31,6 +30,12 @@ public class ModBlockLootTables extends BlockLoot {
 
         this.add(ModBlocks.VOID_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.VOID_ORE.get(), ModItems.VOID_FRAGMENT.get()));
+
+        this.add(ModBlocks.NETHERRACK_VOID_ORE.get(),
+                (block) -> createOreDrop(ModBlocks.NETHERRACK_VOID_ORE.get(), ModItems.VOID_FRAGMENT.get()));
+
+        this.add(ModBlocks.ENDSTONE_VOID_ORE.get(),
+                (block) -> createOreDrop(ModBlocks.ENDSTONE_VOID_ORE.get(), ModItems.VOID_FRAGMENT.get()));
     }
 
     @Override

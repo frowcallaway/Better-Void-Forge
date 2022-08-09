@@ -3,6 +3,7 @@ package net.mammalthebest2.better_void.block.custom;
 import net.mammalthebest2.better_void.block.entity.ModBlockEntities;
 import net.mammalthebest2.better_void.block.entity.custom.VoidInfuserBlockEntity;
 import net.minecraft.core.BlockPos;
+
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -24,7 +25,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraftforge.network.NetworkHooks;
 import org.jetbrains.annotations.Nullable;
 
-@SuppressWarnings({"deprecation"})
+
+@SuppressWarnings("all")
 public class VoidInfuser extends BaseEntityBlock {
     public static final DirectionProperty FACING = BlockStateProperties.HORIZONTAL_FACING;
 
@@ -38,7 +40,10 @@ public class VoidInfuser extends BaseEntityBlock {
         return SHAPE;
     }
 
-    /* FACING */
+    /**
+     *<p>This is the facing part.</p>
+     * <p>This handles the facing of a player.</p>
+     */
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext pContext) {
@@ -59,12 +64,10 @@ public class VoidInfuser extends BaseEntityBlock {
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
         pBuilder.add(FACING);
     }
-
-    @Nullable
-    @Override
-    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
-        return new VoidInfuserBlockEntity(pPos, pState);
-    }
+    /**
+     *<p>This is the block entity part.</p>
+     * <p>This handles the opening of gui and others.</p>
+     */
 
     @Override
     public RenderShape getRenderShape(BlockState pState) {
@@ -97,11 +100,17 @@ public class VoidInfuser extends BaseEntityBlock {
         return InteractionResult.sidedSuccess(pLevel.isClientSide());
     }
 
+    @Nullable
+    @Override
+    public BlockEntity newBlockEntity(BlockPos pPos, BlockState pState) {
+        return new VoidInfuserBlockEntity(pPos, pState);
+    }
 
     @Nullable
     @Override
     public <T extends BlockEntity> BlockEntityTicker<T> getTicker(Level pLevel, BlockState pState, BlockEntityType<T> pBlockEntityType) {
-        return createTickerHelper(pBlockEntityType, ModBlockEntities.VOID_INFUSER_BLOCK_ENTITY.get(),
+        return createTickerHelper(pBlockEntityType, ModBlockEntities.VOID_INFUSER_ENTITY.get(),
                 VoidInfuserBlockEntity::tick);
     }
+
 }

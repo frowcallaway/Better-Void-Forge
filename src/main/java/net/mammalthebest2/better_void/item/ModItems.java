@@ -54,7 +54,7 @@ public class ModItems {
     public static final RegistryObject<Item> VOID_CHESTPLATE= ITEMS.register("void_chestplate",
             () -> new ArmorItem(ModArmorMaterials.EXTREME_VOID, EquipmentSlot.CHEST, new Item.Properties().tab(BetterVoidCreativeTab.better_void)));
 
-    public static final RegistryObject<Item> VOID_LEGGING= ITEMS.register("void_leggings",
+    public static final RegistryObject<Item> VOID_LEGGINGS= ITEMS.register("void_leggings",
             () -> new ArmorItem(ModArmorMaterials.EXTREME_VOID, EquipmentSlot.LEGS, new Item.Properties().tab(BetterVoidCreativeTab.better_void)));
 
     public static final RegistryObject<Item> VOID_BOOTS= ITEMS.register("void_boots",
