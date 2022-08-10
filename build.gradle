@@ -37,7 +37,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. They may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'official', version: '1.18.1'
+    mappings channel: 'parchment', 'version': '1.18.1-2022.02.13-1.18.2'
 
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg') // Currently, this location cannot be changed from the default.
 
@@ -166,13 +166,11 @@ repositories{
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.1-39.1.0'
-
+    minecraft 'net.minecraftforge:forge:1.18.2-40.0.5'
     // compile against the JEI API but do not include it at runtime
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
-
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
