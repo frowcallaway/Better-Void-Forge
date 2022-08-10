@@ -42,7 +42,7 @@ public class BetterVoidMain
 
     // This is the mod id of the mod called the "better_void".
             // Continue on (Scroll down)
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
     public static final String MOD_ID = "better_void";
 
 
