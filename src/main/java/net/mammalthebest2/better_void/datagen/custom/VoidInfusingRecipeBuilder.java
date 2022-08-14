@@ -3,7 +3,7 @@ package net.mammalthebest2.better_void.datagen.custom;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.mammalthebest2.better_void.BetterVoidMain;
-import net.mammalthebest2.better_void.recipe.VoidInfusingRecipe;
+import net.mammalthebest2.better_void.recipe.VoidInfuserRecipe;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementRewards;
 import net.minecraft.advancements.CriterionTriggerInstance;
@@ -101,7 +101,7 @@ public class VoidInfusingRecipeBuilder implements RecipeBuilder {
 
         @Override
         public RecipeSerializer<?> getType() {
-            return VoidInfusingRecipe.Serializer.INSTANCE;
+            return VoidInfuserRecipe.Serializer.INSTANCE;
         }
 
         @javax.annotation.Nullable

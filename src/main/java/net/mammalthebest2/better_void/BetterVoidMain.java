@@ -3,6 +3,7 @@ package net.mammalthebest2.better_void;
 import net.mammalthebest2.better_void.block.ModBlocks;
 import net.mammalthebest2.better_void.block.entity.ModBlockEntities;
 import net.mammalthebest2.better_void.effect.ModEffects;
+import net.mammalthebest2.better_void.entity.ModEntityTypes;
 import net.mammalthebest2.better_void.item.ModItems;
 import net.mammalthebest2.better_void.potion.ModPotions;
 import net.mammalthebest2.better_void.recipe.ModRecipes;
@@ -21,6 +22,7 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import software.bernie.geckolib3.GeckoLib;
 
 // The value here should match an entry in the META-INF/mods.toml file
 
@@ -66,6 +68,10 @@ public class BetterVoidMain
 
         ModPotions.register(eventBus);
         ModRecipes.register(eventBus);
+
+        ModEntityTypes.register(eventBus);
+
+        GeckoLib.initialize();
 
 
 

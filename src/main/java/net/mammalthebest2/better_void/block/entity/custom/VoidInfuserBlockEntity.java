@@ -1,7 +1,7 @@
 package net.mammalthebest2.better_void.block.entity.custom;
 
 import net.mammalthebest2.better_void.block.entity.ModBlockEntities;
-import net.mammalthebest2.better_void.recipe.VoidInfusingRecipe;
+import net.mammalthebest2.better_void.recipe.VoidInfuserRecipe;
 import net.mammalthebest2.better_void.screen.VoidInfuserMenu;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -149,8 +149,8 @@ public class VoidInfuserBlockEntity extends BlockEntity implements MenuProvider 
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<VoidInfusingRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VoidInfusingRecipe.Type.INSTANCE, inventory, level);
+        Optional<VoidInfuserRecipe> match = level.getRecipeManager()
+                .getRecipeFor(VoidInfuserRecipe.Type.INSTANCE, inventory, level);
 
         return match.isPresent() && canInsertAmountIntoOutputSlot(inventory)
                 && canInsertItemIntoOutputSlot(inventory, match.get().getResultItem())
@@ -172,8 +172,8 @@ public class VoidInfuserBlockEntity extends BlockEntity implements MenuProvider 
             inventory.setItem(i, entity.itemHandler.getStackInSlot(i));
         }
 
-        Optional<VoidInfusingRecipe> match = level.getRecipeManager()
-                .getRecipeFor(VoidInfusingRecipe.Type.INSTANCE, inventory, level);
+        Optional<VoidInfuserRecipe> match = level.getRecipeManager()
+                .getRecipeFor(VoidInfuserRecipe.Type.INSTANCE, inventory, level);
 
         if(match.isPresent()) {
             entity.itemHandler.extractItem(0,1, false);

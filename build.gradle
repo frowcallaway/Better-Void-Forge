@@ -163,14 +163,20 @@ repositories{
         name = "ModMaven"
         url = "https://modmaven.dev"
     }
+    // Geckolib
+    maven {
+        url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+    }
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.18.2-40.0.5'
+    minecraft 'net.minecraftforge:forge:1.18.2-40.1.0'
     // compile against the JEI API but do not include it at runtime
     compileOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}:api")
     // at runtime, use the full JEI jar
     runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
+    // Geckolib
+    implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.18:3.0.34')
 }
 
 // Example for how to get properties into the manifest for reading at runtime.
@@ -178,7 +184,7 @@ jar {
     manifest {
         attributes([
                 "Specification-Title"     : "better_void",
-                "Specification-Vendor"    : "examplemodsareus",
+                "Specification-Vendor"    : "bettervoidareus",
                 "Specification-Version"   : "1", // We are version 1 of ourselves
                 "Implementation-Title"    : project.name,
                 "Implementation-Version"  : project.jar.archiveVersion,

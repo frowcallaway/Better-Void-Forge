@@ -15,6 +15,7 @@
   "item.better_void.void_boots": "Void Boots",
   "item.better_void.void_music_disc": "Void Disc",
   "item.better_void.void_music_disc.desc": "ChewieCatt - Why?",
+  "item.better_void.player_spawn_egg": "Player Spawn Egg",
 
   "block.better_void.void_block": "Void Block",
   "block.better_void.void_ore": "Void Ore",
@@ -25,6 +26,8 @@
   "block.better_void.stripped_void_wood": "Stripped Void Wood",
   "block.better_void.void_sapling": "Void Sapling",
   "block.better_void.void_leaves": "Void Leaves",
+  "block.better_void.endstone_void_ore": "Endstone Void Ore",
+  "block.better_void.netherrack_void_ore": "Netherrack Void Ore",
 
 
   "block.better_void.void_stairs": "Void Stairs",
@@ -38,7 +41,7 @@
   "block.better_void.void_door": "Void Door",
   "block.better_void.void_infuser": "Void Infuser",
 
-  "itemGroup.better_void_tab": "Voidless Mod",
+  "itemGroup.better_void_tab": "Better Void",
   "item.better_void.void_staff.no_valuables": "No Valuables Were Found",
   "item.better_void.tooltip.shiftdown": "This can find ores such as coal, iron and diamond. Right click on blocks to find valuables",
   "item.better_void.tooltip": "Press SHIFT for more information",
@@ -47,5 +50,6 @@
   "effect.better_void.traumatised": "Traumatised",
   "item.minecraft.splash_potion.effect.potion_of_traumatised": "Splash Potion Of Traumatised",
   "item.minecraft.lingering_potion.effect.potion_of_traumatised": "Lingering Potion of Traumatised",
-  "item.minecraft.tipped_arrow.effect.potion_of_traumatised": "Tipped Arrow Of Traumatised"
+  "item.minecraft.tipped_arrow.effect.potion_of_traumatised": "Tipped Arrow Of Traumatised",
+  "commands.locateore.notFound": "commands.locateore.notFound"
 }
