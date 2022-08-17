@@ -6,6 +6,7 @@ import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.features.OreFeatures;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
@@ -17,6 +18,7 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlac
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;
+import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 
 import java.util.List;
 
@@ -41,7 +43,20 @@ public class ModConfiguredFeatures {
             OreConfiguration.target(OreFeatures.STONE_ORE_REPLACEABLES, ModBlocks.VOID_ORE.get().defaultBlockState()),
             OreConfiguration.target(OreFeatures.DEEPSLATE_ORE_REPLACEABLES, ModBlocks.VOID_ORE.get().defaultBlockState()));
 
+    public static final List<OreConfiguration.TargetBlockState> NETHER_VOID_ORES = List.of(
+            OreConfiguration.target(OreFeatures.NETHERRACK, ModBlocks.NETHERRACK_VOID_ORE.get().defaultBlockState()));
+
+    public static final List<OreConfiguration.TargetBlockState> END_VOID_ORES = List.of(
+            OreConfiguration.target(new BlockMatchTest(Blocks.END_STONE), ModBlocks.ENDSTONE_VOID_ORE.get().defaultBlockState()));
+
+
     public static final Holder<ConfiguredFeature<OreConfiguration, ?>> VOID_ORE = FeatureUtils.register("void_ore",
-            Feature.ORE, new OreConfiguration(OVERWORLD_VOID_ORES, 9));
+            Feature.ORE, new OreConfiguration(OVERWORLD_VOID_ORES, 14));
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> END_VOID_ORE = FeatureUtils.register("end_void_ore",
+            Feature.ORE, new OreConfiguration(END_VOID_ORES, 14));
+
+    public static final Holder<ConfiguredFeature<OreConfiguration, ?>> NETHER_VOID_ORE = FeatureUtils.register("nether_void_ore",
+            Feature.ORE, new OreConfiguration(NETHER_VOID_ORES, 14));
 
 }

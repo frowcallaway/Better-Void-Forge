@@ -15,5 +15,13 @@ public class ModPlacedFeature {
 
     public static final Holder<PlacedFeature> VOID_ORE_PLACED = PlacementUtils.register("void_ore_placed",
             ModConfiguredFeatures.VOID_ORE, ModOrePlacement.commonOrePlacement(9, // VeinsPerChunk
-                    HeightRangePlacement.triangle(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+    public static final Holder<PlacedFeature> END_VOID_ORE_PLACED = PlacementUtils.register("end_void_ore_placed",
+            ModConfiguredFeatures.END_VOID_ORE, ModOrePlacement.commonOrePlacement(9, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
+
+    public static final Holder<PlacedFeature> NETHER_VOID_ORE_PLACED = PlacementUtils.register("nether_void_ore_placed",
+            ModConfiguredFeatures.NETHER_VOID_ORE, ModOrePlacement.commonOrePlacement(9, // VeinsPerChunk
+                    HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-80), VerticalAnchor.aboveBottom(80))));
 }

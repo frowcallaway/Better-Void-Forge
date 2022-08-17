@@ -3,6 +3,7 @@ package net.mammalthebest2.better_void;
 import net.mammalthebest2.better_void.block.ModBlocks;
 import net.mammalthebest2.better_void.block.entity.ModBlockEntities;
 import net.mammalthebest2.better_void.effect.ModEffects;
+import net.mammalthebest2.better_void.enchantment.ModEnchantments;
 import net.mammalthebest2.better_void.entity.ModEntityTypes;
 import net.mammalthebest2.better_void.item.ModItems;
 import net.mammalthebest2.better_void.potion.ModPotions;
@@ -70,6 +71,7 @@ public class BetterVoidMain
         ModRecipes.register(eventBus);
 
         ModEntityTypes.register(eventBus);
+        ModEnchantments.register(eventBus);
 
         GeckoLib.initialize();
 

@@ -15,11 +15,10 @@ public class ModEntityTypes {
             DeferredRegister.create(ForgeRegistries.ENTITIES, BetterVoidMain.MOD_ID);
 
     public static final RegistryObject<EntityType<PlayerEntity>> PLAYER =
-            ENTITY_TYPES.register("raccoon",
+            ENTITY_TYPES.register("player",
                     () -> EntityType.Builder.of(PlayerEntity::new, MobCategory.CREATURE)
                             .sized(0.8f, 1.0f)
                             .build(new ResourceLocation(BetterVoidMain.MOD_ID, "player").toString()));
-
 
     public static void register(IEventBus eventBus){
         ENTITY_TYPES.register(eventBus);
