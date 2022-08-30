@@ -17,10 +17,10 @@ import net.minecraftforge.registries.RegistryObject;
 
 public class ModItems {
     // DEFERRED REGISTER
-    // 17 USAGES?!
+    // 18 USAGES?!
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, BetterVoidMain.MOD_ID);
-    // 3 USAGES?!
+    // 10 USAGES?!
     public static final RegistryObject<Item> VOID_INGOT = ITEMS.register("void_ingot",
             () -> new Item(new Item.Properties().tab(BetterVoidCreativeTab.better_void).fireResistant()));
 

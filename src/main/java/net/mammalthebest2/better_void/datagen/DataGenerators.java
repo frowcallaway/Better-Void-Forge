@@ -21,6 +21,5 @@ public class DataGenerators {
         generator.addProvider(new ModRecipeProvider(generator));
 
 
-
     }
 }

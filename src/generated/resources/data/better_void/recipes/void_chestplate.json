@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "D D",
-    "DDD",
-    "DDD"
+    "I I",
+    "III",
+    "III"
   ],
   "key": {
-    "D": {
+    "I": {
       "item": "better_void:void_ingot"
     }
   },

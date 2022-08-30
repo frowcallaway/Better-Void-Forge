@@ -1,7 +1,7 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "DDD"
+    "DD"
   ],
   "key": {
     "D": {
@@ -9,6 +9,6 @@
     }
   },
   "result": {
-    "item": "better_void:void_slab"
+    "item": "better_void:void_pressure_plate"
   }
 }

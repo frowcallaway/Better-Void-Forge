@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "better_void:void_fence_gate"
+      "better_void:void_pressure_plate"
     ]
   },
   "criteria": {
-    "has_void_block": {
+    "has_void_planks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "better_void:void_block"
+              "better_void:void_planks"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "better_void:void_fence_gate"
+        "recipe": "better_void:void_pressure_plate"
       }
     }
   },
   "requirements": [
     [
-      "has_void_block",
+      "has_void_planks",
       "has_the_recipe"
     ]
   ]

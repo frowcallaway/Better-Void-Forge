@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "FFF",
+    "FOF",
+    "FFF"
+  ],
+  "key": {
+    "O": {
+      "item": "better_void:void_ore"
+    },
+    "F": {
+      "item": "better_void:void_fragment"
+    }
+  },
+  "result": {
+    "item": "better_void:void_infuser"
+  }
+}

@@ -6,13 +6,13 @@
     ]
   },
   "criteria": {
-    "has_void_block": {
+    "has_void_planks": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "better_void:void_block"
+              "better_void:void_planks"
             ]
           }
         ]
@@ -27,7 +27,7 @@
   },
   "requirements": [
     [
-      "has_void_block",
+      "has_void_planks",
       "has_the_recipe"
     ]
   ]

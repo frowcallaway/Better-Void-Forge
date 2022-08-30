@@ -55,7 +55,7 @@ public class VoidInfusingRecipeBuilder implements RecipeBuilder {
                         RecipeUnlockedTrigger.unlocked(pRecipeId))
                 .rewards(AdvancementRewards.Builder.recipe(pRecipeId)).requirements(RequirementsStrategy.OR);
 
-        pFinishedRecipeConsumer.accept(new VoidInfusingRecipeBuilder.Result(pRecipeId, this.result, this.count, this.ingredient,
+        pFinishedRecipeConsumer.accept(new Result(pRecipeId, this.result, this.count, this.ingredient,
                 this.advancement, new ResourceLocation(pRecipeId.getNamespace(), "recipes/" +
                 this.result.getItemCategory().getRecipeFolderName() + "/" + pRecipeId.getPath())));
     }

@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "DD ",
-    " # ",
-    " # "
+    "II ",
+    " S ",
+    " S "
   ],
   "key": {
-    "D": {
+    "I": {
       "item": "better_void:void_ingot"
     },
-    "#": {
+    "S": {
       "item": "minecraft:stick"
     }
   },

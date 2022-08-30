@@ -1,19 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "#X#",
-    "#D#",
-    " D "
+    "ODO",
+    "OIO",
+    " I "
   ],
   "key": {
     "D": {
-      "item": "better_void:void_ingot"
+      "item": "better_void:void_block"
     },
-    "#": {
+    "O": {
       "item": "better_void:void_ore"
     },
-    "X": {
-      "item": "better_void:void_block"
+    "I": {
+      "item": "better_void:void_ingot"
     }
   },
   "result": {

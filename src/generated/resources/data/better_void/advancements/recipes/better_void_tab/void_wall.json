@@ -2,17 +2,17 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "better_void:void_slab"
+      "better_void:void_wall"
     ]
   },
   "criteria": {
-    "has_void_planks": {
+    "has_void_block": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
             "items": [
-              "better_void:void_planks"
+              "better_void:void_block"
             ]
           }
         ]
@@ -21,13 +21,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "better_void:void_slab"
+        "recipe": "better_void:void_wall"
       }
     }
   },
   "requirements": [
     [
-      "has_void_planks",
+      "has_void_block",
       "has_the_recipe"
     ]
   ]

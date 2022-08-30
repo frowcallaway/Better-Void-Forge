@@ -1,16 +1,16 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "DDD",
-    "DED",
-    "DDD"
+    "III",
+    "IBI",
+    "III"
   ],
   "key": {
-    "E": {
-      "item": "minecraft:cooked_beef"
-    },
-    "D": {
+    "I": {
       "item": "better_void:void_ingot"
+    },
+    "B": {
+      "item": "minecraft:beef"
     }
   },
   "result": {
