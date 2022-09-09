@@ -13,7 +13,7 @@ public class PlayerModel extends AnimatedGeoModel<PlayerEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(PlayerEntity object) {
-        return new ResourceLocation(BetterVoidMain.MOD_ID, "textures/entity/face.png");
+        return new ResourceLocation(BetterVoidMain.MOD_ID, "textures/entity/player.png");
     }
 
     @Override

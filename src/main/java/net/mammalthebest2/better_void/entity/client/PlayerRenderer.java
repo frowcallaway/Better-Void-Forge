@@ -19,7 +19,7 @@ public class PlayerRenderer extends GeoEntityRenderer<PlayerEntity> {
 
     @Override
     public ResourceLocation getTextureLocation(PlayerEntity instance) {
-        return new ResourceLocation(BetterVoidMain.MOD_ID, "textures/entity/face.png");
+        return new ResourceLocation(BetterVoidMain.MOD_ID, "textures/entity/player.png");
     }
 
     @Override
