@@ -10,8 +10,10 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.BlastingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.SmeltingRecipe;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.Tags;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
+import org.lwjgl.system.CallbackI;
 
 import java.util.function.Consumer;
 
@@ -215,6 +217,139 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy("has_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
                         .of(ModItems.VOID_INGOT.get()).build()))
                 .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.EARTH_INFUSED_VOID_HELMET.get())
+                .define('I', ModItems.EARTH_INFUSED_VOID_INGOT.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("   ")
+                .unlockedBy("has_earth_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.EARTH_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.EARTH_INFUSED_VOID_LEGGINGS.get())
+                .define('I', ModItems.EARTH_INFUSED_VOID_INGOT.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("I I")
+                .unlockedBy("has_earth_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.EARTH_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.EARTH_INFUSED_VOID_BOOTS.get())
+                .define('I', ModItems.EARTH_INFUSED_VOID_INGOT.get())
+                .pattern("   ")
+                .pattern("I I")
+                .pattern("I I")
+                .unlockedBy("has_earth_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.EARTH_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.WATER_INFUSED_VOID_HELMET.get())
+                .define('I', ModItems.WATER_INFUSED_VOID_INGOT.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("   ")
+                .unlockedBy("has_water_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.WATER_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.WATER_INFUSED_VOID_CHESTPLATE.get())
+                .define('I', ModItems.WATER_INFUSED_VOID_INGOT.get())
+                .pattern("I I")
+                .pattern("III")
+                .pattern("III")
+                .unlockedBy("has_water_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.WATER_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.WATER_INFUSED_VOID_LEGGINGS.get())
+                .define('I', ModItems.WATER_INFUSED_VOID_INGOT.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("I I")
+                .unlockedBy("has_water_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.WATER_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.WATER_INFUSED_VOID_BOOTS.get())
+                .define('I', ModItems.WATER_INFUSED_VOID_INGOT.get())
+                .pattern("   ")
+                .pattern("I I")
+                .pattern("I I")
+                .unlockedBy("has_water_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.WATER_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.LAVA_INFUSED_VOID_HELMET.get())
+                .define('I', ModItems.LAVA_INFUSED_VOID_INGOT.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("   ")
+                .unlockedBy("has_lava_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.LAVA_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.LAVA_INFUSED_VOID_CHESTPLATE.get())
+                .define('I', ModItems.LAVA_INFUSED_VOID_INGOT.get())
+                .pattern("I I")
+                .pattern("III")
+                .pattern("III")
+                .unlockedBy("has_lava_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.LAVA_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.LAVA_INFUSED_VOID_LEGGINGS.get())
+                .define('I', ModItems.LAVA_INFUSED_VOID_INGOT.get())
+                .pattern("III")
+                .pattern("I I")
+                .pattern("I I")
+                .unlockedBy("has_lava_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.LAVA_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.LAVA_INFUSED_VOID_BOOTS.get())
+                .define('I', ModItems.LAVA_INFUSED_VOID_INGOT.get())
+                .pattern("   ")
+                .pattern("I I")
+                .pattern("I I")
+                .unlockedBy("has_lava_infused_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.LAVA_INFUSED_VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.WATER_INFUSED_VOID_INGOT.get())
+                .define('W', Items.WATER_BUCKET)
+                .define('I', ModItems.VOID_INGOT.get())
+                .pattern(" W ")
+                .pattern("WIW")
+                .pattern(" W ")
+                .unlockedBy("has_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.EARTH_INFUSED_VOID_INGOT.get())
+                .define('G', Blocks.GRASS_BLOCK)
+                .define('I', ModItems.VOID_INGOT.get())
+                .pattern(" G ")
+                .pattern("GIG")
+                .pattern(" G ")
+                .unlockedBy("has_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        ShapedRecipeBuilder.shaped(ModItems.LAVA_INFUSED_VOID_INGOT.get())
+                .define('L', Items.LAVA_BUCKET)
+                .define('I', ModItems.VOID_INGOT.get())
+                .pattern(" L ")
+                .pattern("LIL")
+                .pattern(" L ")
+                .unlockedBy("has_void_ingot", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.VOID_INGOT.get()).build()))
+                .save(pFinishedRecipeConsumer);
+
+        new VoidInfusingRecipeBuilder(ModItems.VOID_FRAGMENT.get(), ModItems.VOID_INGOT.get(), 1)
+                .unlockedBy("has_void_fragment", inventoryTrigger(ItemPredicate.Builder.item()
+                        .of(ModItems.VOID_FRAGMENT.get()).build()));
 
     }
 }
