@@ -38,7 +38,6 @@ public class BetterVoidMain
      *
      *
      * Enjoy as these "//" walk you through.
-     *
      * Use the "//" to walk you through.
      */
 
@@ -84,8 +83,6 @@ public class BetterVoidMain
 
     private void setup(final FMLCommonSetupEvent event)
     {
-       LOGGER.warn("This mod is currently in Alpha stage");
+       LOGGER.info("Mod is initialized");
     }
-
 }
-

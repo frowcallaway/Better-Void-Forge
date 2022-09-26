@@ -22,7 +22,7 @@ public class ModTags {
     }
 
     public static class Items{
-        public static final TagKey<Item> VOID_ITEMS = ForgeTag("void/void_ingot");
+        public static final TagKey<Item> VOID_ITEMS = ForgeTag("void/void_ingots");
 
         private static TagKey<Item> tag (String name){
             return ItemTags.create(new ResourceLocation(BetterVoidMain.MOD_ID, name));

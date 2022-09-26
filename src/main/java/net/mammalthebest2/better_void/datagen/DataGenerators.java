@@ -18,6 +18,7 @@ public class DataGenerators {
         generator.addProvider(new ModItemModelProvider(generator, existingFileHelper));
         generator.addProvider(new ModBlockStateProvider(generator, existingFileHelper));
         generator.addProvider(new ModLootTableProvider(generator));
+        generator.addProvider(new ModLanguageProvider(generator, BetterVoidMain.MOD_ID, "en_us"));
         generator.addProvider(new ModRecipeProvider(generator));
 
 

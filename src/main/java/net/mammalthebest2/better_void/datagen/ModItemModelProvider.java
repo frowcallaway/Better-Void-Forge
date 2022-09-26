@@ -18,14 +18,32 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.VOID_INGOT.get());
         simpleItem(ModItems.VOID_FRAGMENT.get());
-        simpleItem(ModItems.VOID_BOOTS.get());
-        simpleItem(ModItems.VOID_CHESTPLATE.get());
         simpleItem(ModItems.VOID_BURNER.get());
-
+        simpleItem(ModItems.EARTH_INFUSED_VOID_INGOT.get());
+        simpleItem(ModItems.LAVA_INFUSED_VOID_INGOT.get());
+        simpleItem(ModItems.WATER_INFUSED_VOID_INGOT.get());
         simpleItem(ModItems.VOID_STEAK.get());
+        simpleItem(ModItems.VOID_MUSIC_DISC.get());
+
+        simpleItem(ModItems.VOID_BOOTS.get());
         simpleItem(ModItems.VOID_HELMET.get());
         simpleItem(ModItems.VOID_LEGGINGS.get());
-        simpleItem(ModItems.VOID_MUSIC_DISC.get());
+        simpleItem(ModItems.VOID_CHESTPLATE.get());
+
+        simpleItem(ModItems.EARTH_INFUSED_VOID_BOOTS.get());
+        simpleItem(ModItems.EARTH_INFUSED_VOID_LEGGINGS.get());
+        simpleItem(ModItems.EARTH_INFUSED_VOID_CHESTPLATE.get());
+        simpleItem(ModItems.EARTH_INFUSED_VOID_HELMET.get());
+
+        simpleItem(ModItems.WATER_INFUSED_VOID_BOOTS.get());
+        simpleItem(ModItems.WATER_INFUSED_VOID_LEGGINGS.get());
+        simpleItem(ModItems.WATER_INFUSED_VOID_CHESTPLATE.get());
+        simpleItem(ModItems.WATER_INFUSED_VOID_HELMET.get());
+
+        simpleItem(ModItems.LAVA_INFUSED_VOID_BOOTS.get());
+        simpleItem(ModItems.LAVA_INFUSED_VOID_LEGGINGS.get());
+        simpleItem(ModItems.LAVA_INFUSED_VOID_CHESTPLATE.get());
+        simpleItem(ModItems.LAVA_INFUSED_VOID_HELMET.get());
 
         handheldItem(ModItems.VOID_SHOVEL.get());
         handheldItem(ModItems.VOID_AXE.get());

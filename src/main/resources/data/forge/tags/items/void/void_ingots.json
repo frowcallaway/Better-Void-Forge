@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "better_void:void_ingot",
+    "better_void:lava_infused_void_ingot",
+    "better_void:water_infused_void_ingot",
+    "better_void:earth_infused_void_ingot"
+  ]
+}

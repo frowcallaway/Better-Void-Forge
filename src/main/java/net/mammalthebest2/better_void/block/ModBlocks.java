@@ -51,41 +51,41 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> VOID_BLOCK = registerBlock("void_block",
-            () -> new VoidBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new VoidBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_ORE = registerBlock("void_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_STAIRS = registerBlock("void_stairs",
-            () -> new StairBlock(() -> ModBlocks.VOID_BLOCK.get().defaultBlockState() ,BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new StairBlock(() -> ModBlocks.VOID_BLOCK.get().defaultBlockState() ,BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_SLAB = registerBlock("void_slab",
-            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new SlabBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_FENCE = registerBlock("void_fence",
-            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_FENCE_GATE = registerBlock("void_fence_gate",
-            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.METAL).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_WALL = registerBlock("void_wall",
-            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new WallBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_BUTTON = registerBlock("void_button",
-            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f).noCollission()), BetterVoidCreativeTab.better_void);
+            () -> new StoneButtonBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f).noCollission()), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_PRESSURE_PLATE = registerBlock("void_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.better_void);
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().strength(9f)), BetterVoidCreativeTab.BETTER_VOID);
     public static final RegistryObject<Block> VOID_TRAPDOOR = registerBlock("void_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().noOcclusion()), BetterVoidCreativeTab.better_void);
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.STONE).requiresCorrectToolForDrops().noOcclusion()), BetterVoidCreativeTab.BETTER_VOID);
     public static final RegistryObject<Block> VOID_DOOR = registerBlock("void_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)), BetterVoidCreativeTab.better_void);
+            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_LOG = registerBlock("void_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), BetterVoidCreativeTab.better_void);
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_WOOD = registerBlock("void_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), BetterVoidCreativeTab.better_void);
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_PLANKS = registerBlock("void_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
@@ -103,13 +103,13 @@ public class ModBlocks {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
                     return 5;
                 }
-            }, BetterVoidCreativeTab.better_void);
+            }, BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> STRIPPED_VOID_LOG = registerBlock("stripped_void_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), BetterVoidCreativeTab.better_void);
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> STRIPPED_VOID_WOOD = registerBlock("stripped_void_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), BetterVoidCreativeTab.better_void);
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_LEAVES = registerBlock("void_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.of(Material.LEAVES)) {
@@ -127,18 +127,18 @@ public class ModBlocks {
                 public int getFireSpreadSpeed(BlockState state, BlockGetter world, BlockPos pos, Direction face) {
                     return 20;
                 }
-            }, BetterVoidCreativeTab.better_void);
+            }, BetterVoidCreativeTab.BETTER_VOID);
     public static final RegistryObject<Block> VOID_SAPLING = registerBlock("void_sapling",
-            () -> new SaplingBlock(new VoidTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), BetterVoidCreativeTab.better_void);
+            () -> new SaplingBlock(new VoidTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> VOID_INFUSER = registerBlock("void_infuser",
-            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()), BetterVoidCreativeTab.better_void);
+            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.METAL).noOcclusion()), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> ENDSTONE_VOID_ORE = registerBlock("endstone_void_ore",
-            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.STONE)), BetterVoidCreativeTab.better_void);
+            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.STONE)), BetterVoidCreativeTab.BETTER_VOID);
 
     public static final RegistryObject<Block> NETHERRACK_VOID_ORE = registerBlock("netherrack_void_ore",
-            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.STONE)), BetterVoidCreativeTab.better_void);
+            () -> new VoidInfuser(BlockBehaviour.Properties.of(Material.STONE)), BetterVoidCreativeTab.BETTER_VOID);
 
 
 

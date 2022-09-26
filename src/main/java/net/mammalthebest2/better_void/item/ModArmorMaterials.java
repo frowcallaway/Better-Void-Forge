@@ -14,8 +14,18 @@ import java.util.function.Supplier;
 
 public enum ModArmorMaterials implements ArmorMaterial {
     EXTREME_VOID("extreme_void", 35, new int[]{4, 6, 10, 10}, 22, SoundEvents.ARMOR_EQUIP_DIAMOND,
-            2.0F, 0.0F, () -> {return Ingredient.of(ModItems.VOID_INGOT.get());
-    });
+            2.0F, 0.0F, () -> Ingredient.of(ModItems.VOID_INGOT.get())),
+
+    EARTH_INFUSED_VOID("earth_infused_void", 35, new int[]{4, 6, 10, 10}, 22, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            2.0F, 0.0F, () -> Ingredient.of(ModItems.EARTH_INFUSED_VOID_INGOT.get())),
+
+    WATER_INFUSED_VOID("water_infused_void", 35, new int[]{4, 6, 10, 10}, 22, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            2.0F, 0.0F, () -> Ingredient.of(ModItems.WATER_INFUSED_VOID_INGOT.get())),
+
+    LAVA_INFUSED_VOID("lava_infused_void", 35, new int[]{4, 6, 10, 10}, 22, SoundEvents.ARMOR_EQUIP_DIAMOND,
+            2.0F, 0.0F, () -> Ingredient.of(ModItems.LAVA_INFUSED_VOID_INGOT.get()));
+
+
     private static final int[] HEALTH_PER_SLOT = new int[]{13, 15, 16, 11};
     private final String name;
     private final int durabilityMultiplier;
