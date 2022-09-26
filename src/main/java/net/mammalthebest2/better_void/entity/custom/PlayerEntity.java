@@ -76,11 +76,11 @@ public class PlayerEntity extends Animal implements IAnimatable {
     }
 
     protected void playStepSound(BlockPos pos, BlockState blockIn) {
-        this.playSound(SoundEvents.PLAYER_BIG_FALL, 0.15F, 1.0F);
+        this.playSound(SoundEvents.ARMOR_EQUIP_IRON, 0.15F, 1.0F);
     }
 
     protected SoundEvent getAmbientSound() {
-        return SoundEvents.PLAYER_BREATH;
+        return SoundEvents.FIRE_AMBIENT;
     }
 
     protected SoundEvent getHurtSound(DamageSource damageSourceIn) {

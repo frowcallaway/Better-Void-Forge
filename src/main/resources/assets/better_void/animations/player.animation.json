@@ -1,6 +1,10 @@
 {
 	"format_version": "1.8.0",
 	"animations": {
+		"animation.player.idle": {
+			"loop": true,
+			"animation_length": 2
+		},
 		"animation.player.walk": {
 			"loop": true,
 			"animation_length": 1.875,
@@ -15,12 +19,7 @@
 				},
 				"leg2": {
 					"rotation": {
-						"0.0": {
-							"vector": [0, 0, "-180 + math.sin(query.anim_time * 360)*15"]
-						},
-						"1.4583": {
-							"vector": [0, 0, "-180 + math.sin(query.anim_time * 360)*15"]
-						}
+						"vector": [0, 0, "-180 + math.sin(query.anim_time * 360)*15"]
 					},
 					"position": {
 						"vector": [0, 18, 0]
@@ -33,13 +32,10 @@
 				},
 				"arm1": {
 					"rotation": {
-						"vector": [0, 0, "-180 + math.sin(query.anim_time * 360)*3"]
+						"vector": [0, 0, "180 + math.sin(query.anim_time * 360)*3"]
 					},
 					"position": {
 						"vector": [-1, 50, 0]
-					},
-					"scale": {
-						"vector": [1, 1, 1]
 					}
 				},
 				"arm2": {
@@ -51,10 +47,6 @@
 					}
 				}
 			}
-		},
-		"animation.player.idle": {
-			"loop": true,
-			"animation_length": 2
 		}
 	},
 	"geckolib_format_version": 2

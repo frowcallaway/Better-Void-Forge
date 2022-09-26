@@ -14,6 +14,7 @@ public class ModEntityTypes {
     public static final DeferredRegister<EntityType<?>> ENTITY_TYPES =
             DeferredRegister.create(ForgeRegistries.ENTITIES, BetterVoidMain.MOD_ID);
 
+
     public static final RegistryObject<EntityType<PlayerEntity>> PLAYER =
             ENTITY_TYPES.register("player",
                     () -> EntityType.Builder.of(PlayerEntity::new, MobCategory.CREATURE)
